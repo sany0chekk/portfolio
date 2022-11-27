@@ -1,0 +1,40 @@
+.footer {
+	padding: 20px 0;
+	border-top: 1px solid $gray;
+}
+.footer__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.footer__contacts {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.footer__block-name {
+	margin-bottom: 12px;
+
+	font-family: 'Poppins';
+	font-weight: 400;
+	font-size: 15px;
+}
+.footer__link {
+	font-family: 'Poppins';
+	font-weight: 400;
+	font-size: 15px;
+	&:not(:last-child){
+		margin-bottom: 5px;
+	}
+	& a{
+		color: $black;
+	text-decoration: underline;
+	}
+}
+.footer__right {
+	font-family: 'Poppins';
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 30px;
+	color: $gray;
+}

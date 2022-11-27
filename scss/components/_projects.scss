@@ -1,0 +1,45 @@
+.projects {
+	padding: 80px 0;
+}
+.projects__inner{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.projects__title{
+	margin-bottom: 57px;
+
+	font-family: "Russo One";
+	font-weight: 400;
+	font-size: 36px;
+	color: $black;
+}
+.project__list {
+}
+.project__item {
+}
+.project__item-img {
+	margin-bottom: 10px;
+
+	width: 900px;
+	height: 520px;
+
+	background-color: $gray;
+	border-radius: 45px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-family: "Russo One";
+	font-weight: 400;
+	font-size: 36px;
+	color: $black;
+}
+.project__item-name {
+	font-family: "Abel";
+	font-weight: 400;
+	font-style: 20px;
+	color: $black;
+}
