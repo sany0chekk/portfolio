@@ -5,17 +5,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-geist-mono: "Geist Mono", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #2e2f31;
     --foreground: #ededed;
   }
 }
 
 body {
+  font-family: var(--font-geist-mono), sans-serif;
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
 }

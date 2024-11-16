@@ -11,6 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        dark: "#2e2f31",
+        modal: "#232323",
+        green: "#8affba",
+      },
+      fontFamily: {
+        geistMono: ["var(--font-geist-mono)", "monospace"],
       },
     },
   },
