@@ -19,7 +19,7 @@ export default function MobileMenu({ isOpen, onClose }: Props) {
 
   return (
     <div
-      className={`fixed overflow-y-auto bg-modal w-full shadow-lg md:w-[40%] h-full top-0 right-0 p-6 flex flex-col gap-32 transition-all ${
+      className={`lg:hidden z-50 fixed overflow-y-auto bg-modal w-full shadow-lg md:w-[40%] h-full top-0 right-0 p-6 flex flex-col gap-32 transition-all ${
         isOpen
           ? "visible opacity-100 translate-x-0 pointer-events-auto"
           : "invisible opacity-0 translate-x-full pointer-events-none"
@@ -59,7 +59,7 @@ export default function MobileMenu({ isOpen, onClose }: Props) {
         </li>
         <li>
           <Link
-            href="https://github.com/sany0chekk"
+            href="https://www.linkedin.com/in/o-veselyi/"
             target="_blank"
             className="transition-opacity hover:opacity-50"
           >
