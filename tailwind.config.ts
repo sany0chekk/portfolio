@@ -12,7 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         dark: "#2e2f31",
+        secondDark: "#272829",
         modal: "#232323",
+        modalHover: "#272727",
         green: "#8affba",
       },
       fontFamily: {

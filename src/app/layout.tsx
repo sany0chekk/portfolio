@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/Header";
+import Link from "next/link";
 
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
@@ -22,9 +23,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistMono.variable} antialiased overflow-x-hidden`}>
-        <div className="max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg mx-auto px-4 flex flex-col">
+        <div className="pb-4 flex flex-col min-h-screen">
           <Header />
           <div>{children}</div>
+          <div className="mt-auto flex flex-col items-center">
+            <p className="font-black opacity-30">
+              @2024 | All rights reserved.
+            </p>
+            <p className="font-black opacity-50">
+              Developed by{" "}
+              <Link
+                href="https://www.linkedin.com/in/o-veselyi/"
+                className="underline transition-opacity hover:opacity-50"
+              >
+                Oleksandr Veselyi
+              </Link>
+            </p>
+          </div>
         </div>
       </body>
     </html>

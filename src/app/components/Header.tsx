@@ -5,15 +5,16 @@ import NavLink from "./ui/NavLink";
 import { Github, Linkedin, Menu } from "lucide-react";
 import MobileMenu from "./MobileMenu";
 import { useState } from "react";
+import Container from "./shared/Container";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header>
-      <div className="flex items-center justify-between py-5">
-        <Link href="/" className="font-bold text-xl">
-          O. Veselyi
+      <Container className="flex items-center justify-between py-5">
+        <Link href="/" className="font-black text-xl">
+          O.<span className="font-semibold">Veselyi</span>
         </Link>
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-12">
@@ -40,7 +41,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="https://github.com/sany0chekk"
+              href="https://www.linkedin.com/in/o-veselyi/"
               target="_blank"
               className="transition-opacity hover:opacity-50"
             >
@@ -51,7 +52,7 @@ export default function Header() {
         <button className="lg:hidden" onClick={() => setIsMenuOpen(true)}>
           <Menu />
         </button>
-      </div>
+      </Container>
       <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </header>
   );
