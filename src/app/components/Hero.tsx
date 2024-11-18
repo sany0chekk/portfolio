@@ -12,7 +12,7 @@ export default function Hero() {
             Fullstack Developer
           </p>
           <h1 className="font-bold text-2xl mb-2">Hi! I’m Oleksandr Veselyi</h1>
-          <p className="text-lg opacity-70 mb-14">
+          <p className="font-semibold text-lg opacity-70 mb-14">
             I’m a Front-end Developer who creates modern and efficient web
             applications with a focus on usability and performance. I’m
             constantly improving my skills, experimenting with new technologies,
