@@ -7,7 +7,7 @@ import { skills } from "@/content/skills";
 
 export default function Skills() {
   return (
-    <Section className="bg-secondDark">
+    <Section className="bg-secondDark py-20 lg:py-32">
       <Container>
         <SectionTitle className="mb-6">Tech Stack</SectionTitle>
         <div className="flex flex-col md:flex-row gap-20">

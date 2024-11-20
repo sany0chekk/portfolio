@@ -6,7 +6,7 @@ import ContactForm from "../components/ContactForm";
 
 export default function Contacts() {
   return (
-    <Section className="py-10">
+    <Section className="py-10 lg:py-20">
       <Container className="flex flex-col md:flex-row items-center gap-10 md:gap-20">
         <div className="md:w-1/2">
           <p className="font-bold text-lg opacity-80 mb-10">
