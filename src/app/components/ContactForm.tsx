@@ -1,16 +1,56 @@
 "use client";
 
-import { ErrorMessage, Field, Form, Formik } from "formik";
+import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
+import emailjs from "@/utils/emailjs";
+import toast from "react-hot-toast";
+import Loader from "./Loader";
+import { useState } from "react";
 
 export default function ContactForm() {
+  const [isLoading, setIsLoading] = useState(false);
+
   const initialValues = {
     name: "",
     email: "",
     message: "",
   };
+
+  const SERVICE_KEY = process.env.NEXT_PUBLIC_SERVICE_KEY;
+  const TEMPLATE_KEY = process.env.NEXT_PUBLIC_TEMPLATE_KEY;
+
+  const handleSubmit = async (
+    values: typeof initialValues,
+    { resetForm }: FormikHelpers<typeof initialValues>
+  ) => {
+    setIsLoading(true);
+
+    const templateParams = {
+      from_name: values.name,
+      from_email: values.email,
+      message: values.message,
+    };
+
+    try {
+      const result = await emailjs.send(
+        SERVICE_KEY,
+        TEMPLATE_KEY,
+        templateParams
+      );
+      console.log("SUCCESS!", result.status, result.text);
+      toast.success("Thank you for your message! I will get back to you soon.");
+      resetForm();
+    } catch (error) {
+      console.log("FAILED...", error);
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
-    <Formik initialValues={initialValues} onSubmit={() => {}}>
-      <Form className="bg-modal p-6 rounded-md flex flex-col gap-6">
+    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+      <Form className="relative overflow-hidden bg-modal p-6 rounded-md flex flex-col gap-6">
+        {isLoading && <Loader />}
         <div className="flex flex-col">
           <label htmlFor="name" className="font-bold text-base mb-1 opacity-70">
             Enter your name:

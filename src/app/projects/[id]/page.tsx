@@ -1,5 +1,6 @@
 "use client";
 
+import ProjectGallery from "@/app/components/ProjectGallery";
 import ProjectSkills from "@/app/components/ProjectSkills";
 import Container from "@/app/components/shared/Container";
 import Section from "@/app/components/shared/Section";
@@ -47,19 +48,7 @@ export default function Project() {
             GitHub page
           </Link>
         </div>
-        {images.length > 0 && (
-          <ul className="grid md:grid-cols-2 gap-4">
-            {images.map((image, index) => (
-              <li key={index}>
-                <img
-                  src={image}
-                  alt={`${name}-${index}`}
-                  className="rounded-md"
-                />
-              </li>
-            ))}
-          </ul>
-        )}
+        <ProjectGallery images={images} />
       </Container>
     </Section>
   );

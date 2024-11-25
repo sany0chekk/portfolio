@@ -1,8 +1,8 @@
 export const work = [
   {
-    company: "Soon",
+    company: "Freelance",
     position: "Fullstack Developer",
-    date: "...",
+    date: "2023-...",
   },
   {
     company: "EpicentrK",

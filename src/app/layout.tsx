@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/Header";
 import Link from "next/link";
+import { Toaster } from "react-hot-toast";
+import Head from "next/head";
 
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
@@ -22,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <body className={`${geistMono.variable} antialiased overflow-x-hidden`}>
         <div className="pb-4 flex flex-col min-h-screen">
           <Header />
@@ -41,6 +46,7 @@ export default function RootLayout({
             </p>
           </div>
         </div>
+        <Toaster />
       </body>
     </html>
   );

@@ -2,6 +2,7 @@ import { Download } from "lucide-react";
 import Container from "./shared/Container";
 import Section from "./shared/Section";
 import { benefits } from "@/content/benefits";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -19,10 +20,14 @@ export default function Hero() {
             and always open to challenges to deliver the best solutions for my
             clients.
           </p>
-          <button className="flex items-center gap-2 font-bold p-3 bg-white text-dark rounded-md transition-opacity hover:opacity-80">
+          <Link
+            href="./cv.pdf"
+            target="_blank"
+            className="inline-flex items-center gap-2 font-bold p-3 bg-white text-dark rounded-md transition-opacity hover:opacity-80"
+          >
             Download CV
             <Download />
-          </button>
+          </Link>
         </div>
         <div className="lg:w-1/2">
           <h2 className="mb-2 font-bold text-base opacity-50">
